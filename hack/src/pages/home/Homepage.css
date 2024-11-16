@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overflow: hidden;
+} 
+body {
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+video {
+  opacity: 70%;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 30px;
+  border-top-left-radius: 0;
+}
+
+.header {
+  position: absolute;
+  margin-top: 10px;
+  left: 80vw;
+  width: 100%;
+  display: flex;
+  top: 0;
+  flex-direction: row;
+  gap: 20px;
+
+  color: white;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  
+}
+
+#title {
+  font-size: 70px;
+}
+
+#learn:hover {
+  background-color: rgba(97, 96, 96, 0.571);
+  cursor: pointer;
+}
+
+#learn {
+  border-style: solid;
+  border-radius: 50px;
+  padding: 20px;
+  padding-top: 15px;
+  margin-top: 20px;
+}
+
+
+/* .head {
+background-color: rgb(241, 233, 216);
+padding: 10px 0px 10px;
+margin-top: 10px;
+border-radius: 30px;
+position: absolute;
+z-index: 10;
+width: 95%;
+justify-content: center;
+text-align: center;
+left: 2vw;
+
+} */
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(6, 1, 1, 0.979);
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #696969;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #424242;
+}
