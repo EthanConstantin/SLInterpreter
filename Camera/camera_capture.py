@@ -2,30 +2,33 @@ import cv2
 
 
 def capture_frame():
-    # Initialize the webcam capture
-    cap = cv2.VideoCapture(0)  # Use 0 for default webcam
+    cap = cv2.VideoCapture(0)  # Use 0 for the default webcam
 
-    # Check if the webcam is opened correctly
+    # Ensure that the camera is opened successfully
     if not cap.isOpened():
         print("Error: Unable to access the camera.")
         return None
 
-    # Set a lower resolution to capture faster
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+    # Set the resolution for faster capture (optional)
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1024)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 768)
 
-    desired_fps = 30  # Example: 30 FPS
-    cap.set(cv2.CAP_PROP_FPS, desired_fps)
+    # Setting the FPS (set to 30 as an example)
+    cap.set(cv2.CAP_PROP_FPS, 30)
 
-    ret, frame = cap.read()
-    if not ret:
-        print("Error: Failed to grab frame.")
-        return None
+    # Return the frame as long as the webcam is working
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            print("Failed to grab frame.")
+            break
 
-    # Release the camera
+        # Check the FPS here if needed
+        fps = cap.get(cv2.CAP_PROP_FPS)
+        # Uncomment to check FPS for debugging
+        # print(f"Actual FPS: {fps}")
+
+        # Return the captured frame for testing without stopping the function
+        yield frame
+
     cap.release()
-
-    fps = cap.get(cv2.CAP_PROP_FPS)
-    print(f"Actual FPS: {fps}")
-
-    return frame
