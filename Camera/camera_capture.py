@@ -1,5 +1,7 @@
 import cv2
-from ..DetectHand.hand_detection import HandDetector
+
+from hand_detection import HandDetector
+
 
 
 def capture_frame():
@@ -29,7 +31,24 @@ def capture_frame():
         # fps = cap.get(cv2.CAP_PROP_FPS)
         # print(f"Actual FPS: {fps}")
 
-        # Return the captured frame for testing without stopping the function
-        yield frame
+        # Detect hands and extract landmarks
+        frame_with_landmarks, results = hand_detector.detect_hands(frame)
+
+        # Optionally, get landmarks for further processing
+        landmarks = hand_detector.get_landmarks(results)
+
+        if landmarks:
+            print(f"Detected {len(landmarks)} hands.")  # Print number of hands detected
+
+        # Display the frame with hand landmarks
+        cv2.imshow("Hand Detection", frame_with_landmarks)
+
+        # Break the loop if 'q' is pressed
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
 
     cap.release()
+    cv2.destroyAllWindows()
+
+if __name__ == "__main__":
+    capture_frame()
