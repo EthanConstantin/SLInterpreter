@@ -1,0 +1,3 @@
+[submodule "Sign_Language_Recognition"]
+	path = Sign_Language_Recognition
+	url = https://github.com/PrajwalAmte/Sign_Language_Recognition.git
