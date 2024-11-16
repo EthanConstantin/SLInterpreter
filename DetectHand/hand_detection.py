@@ -22,7 +22,8 @@ class HandDetector:
 
         return frame, results
 
-    def get_landmarks(self, results):
+    @staticmethod
+    def get_landmarks(results):
         """Extract and return hand landmarks."""
         if not results.multi_hand_landmarks:
             return None

@@ -1,8 +1,10 @@
 import cv2
+from ..DetectHand.hand_detection import HandDetector
 
 
 def capture_frame():
     cap = cv2.VideoCapture(0)  # Use 0 for the default webcam
+    hand_detector = HandDetector()
 
     # Ensure that the camera is opened successfully
     if not cap.isOpened():
@@ -23,9 +25,8 @@ def capture_frame():
             print("Failed to grab frame.")
             break
 
-        # Check the FPS here if needed
-        fps = cap.get(cv2.CAP_PROP_FPS)
         # Uncomment to check FPS for debugging
+        # fps = cap.get(cv2.CAP_PROP_FPS)
         # print(f"Actual FPS: {fps}")
 
         # Return the captured frame for testing without stopping the function
