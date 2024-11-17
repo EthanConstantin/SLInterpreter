@@ -32,6 +32,8 @@ body {
 
 .headers {
   margin-bottom: 20px;
+  margin-left: 5px;
+  box-shadow: 100px;
   
 }
 
@@ -83,34 +85,37 @@ body {
   font-weight: bold;
 }
 
-#p1:active {
+#p1 {
   border-style: solid;
   border-color: #1592e6;
   border-radius: 50px;
+  background-color: #1592e629;
   color: #1592e6;
   padding: 10px;
+  animation: backgroundBlue 10s ease infinite;
 }
 
-#p1,#p2,#p3,#p4 {
+#p1,#p2,#p3,#p4,#p5,#p6 {
   padding:10px;
 }
 
-#p1:hover, #p2:hover, #p3:hover, #p4:hover {
+#p1:hover, #p2:hover, #p3:hover, #p4:hover, #p5:hover, #p6:hover {
   background-color: rgb(67, 67, 67);
   border-radius: 50px;
+  cursor: pointer;
   
 }
 
 #request:hover {
   background-color: rgb(67, 67, 67);
-  
+  cursor: pointer;
   padding: 10px;
 }
 
 .headers {
-  font-size: 15px; /* Adjust font size as needed */
+  font-size: 20px; /* Adjust font size as needed */
   font-weight: bold; /* Optional: Make the text bold */
-  background: linear-gradient(270deg, #1cc6cc, #1592e6);
+  background: linear-gradient(270deg, #0f84f8, #e48c36, #e3f20e);
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
