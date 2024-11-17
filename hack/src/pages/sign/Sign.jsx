@@ -21,6 +21,7 @@ function Sign() {
           <div id="p4"><h2>mentors</h2></div>
           <div id="p5"><h2>leaderboards</h2></div>
           <div id="p6"><h2>achievements</h2></div>
+          <div id="p6"><h2>games</h2></div>
           <div id="request"><h2>request a live interpreter</h2></div>
         </div>
       </div>
