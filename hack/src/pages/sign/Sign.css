@@ -23,8 +23,8 @@ body {
   flex-direction: column;
   border-right: 2px solid rgb(121, 121, 121);
   padding: 20px;
-  min-width: 100px;
-  max-width: 300px;
+  min-width: 200px;
+  max-width: 400px;
   box-sizing: border-box;
   background-color: rgba(19, 31, 36, 255);
   color: white;
@@ -52,32 +52,40 @@ body {
   justify-content: center;
   align-items: center;
   height: 80vh;
+  
   margin-top: 30px;
-  margin-right: 20vw;
-  margin-left: 20vw;
+  margin-right: 10vw;
+  margin-left: 10vw;
   box-sizing: border-box;
-  background-color: white;
+
+ 
   border-radius: 15px;
 }
 
 #cam {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 24.5vw;
 }
 
 .alphabet {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px; 
-  gap: 10px;
+  padding: 20px; 
+  gap: 20px;
+  
+  font-size: 20px;
 }
 
 .letter {
   padding: 10px;
-  border: 1px solid #000;
+  border: 1px solid #f8f8f8;
   text-align: center;
   width: 30px;
+  color: white;
   height: 30px;
   display: flex;
   align-items: center;
@@ -122,6 +130,14 @@ body {
   animation: backgroundBlue 10s ease infinite;
 }
 
+.display {
+  position: absolute;
+  left: 33.3vw;
+  
+  top: 5vh;
+  border-radius: 30px;
+}
+
 
 
 #request {
@@ -132,7 +148,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   top: 86vh;
-  width: 12vw;
+  width: 17.5vw;
   position:absolute;
 
 }
